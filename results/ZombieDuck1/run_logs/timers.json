@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1713805858",
+        "python_version": "3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Games\\MLZombieDucks\\venv\\Scripts\\mlagents-learn --run-id=ZombieDuck1 --resume",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.2.2+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1713805924"
+    },
+    "total": 66.8166112,
+    "count": 1,
+    "self": 0.006984899999991967,
+    "children": {
+        "run_training.setup": {
+            "total": 0.06227090000000057,
+            "count": 1,
+            "self": 0.06227090000000057
+        },
+        "TrainerController.start_learning": {
+            "total": 66.7473554,
+            "count": 1,
+            "self": 0.0003897000000137041,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 66.7469517,
+                    "count": 1,
+                    "self": 66.7469517
+                },
+                "trainer_threads": {
+                    "total": 9.999999974752427e-07,
+                    "count": 1,
+                    "self": 9.999999974752427e-07
+                },
+                "TrainerController._save_models": {
+                    "total": 1.2999999995599865e-05,
+                    "count": 1,
+                    "self": 1.2999999995599865e-05
+                }
+            }
+        }
+    }
+}
