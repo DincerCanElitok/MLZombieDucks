@@ -114,8 +114,8 @@ MonoBehaviour:
   diet: 0
   ducks: []
   vegetables: []
-  carnivoreColor: {r: 0.9811321, g: 0.55906016, b: 0.55906016, a: 0}
-  herbivoreColor: {r: 0.5029192, g: 0.9622642, b: 0.54402596, a: 0}
+  carnivoreColor: {r: 0.9811321, g: 0.55906016, b: 0.55906016, a: 1}
+  herbivoreColor: {r: 0.5029192, g: 0.9622642, b: 0.54402596, a: 1}
   chooseDiet: 0
 --- !u!95 &5200755768260625605
 Animator:
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 3
+    VectorObservationSize: 7
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 3

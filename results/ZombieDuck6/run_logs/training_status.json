@@ -1,29 +1,29 @@
 {
-    "metadata": {
-        "stats_format_version": "0.3.0",
-        "mlagents_version": "0.30.0",
-        "torch_version": "2.2.2+cpu"
-    },
     "DuckBehavior": {
         "checkpoints": [
             {
-                "steps": 0,
-                "file_path": "results\\ZombieDuck6\\DuckBehavior\\DuckBehavior-0.onnx",
-                "reward": null,
-                "creation_time": 1713848491.3423116,
+                "steps": 45998,
+                "file_path": "results\\ZombieDuck6\\DuckBehavior\\DuckBehavior-45998.onnx",
+                "reward": -1.75,
+                "creation_time": 1715015054.0702708,
                 "auxillary_file_paths": [
-                    "results\\ZombieDuck6\\DuckBehavior\\DuckBehavior-0.pt"
+                    "results\\ZombieDuck6\\DuckBehavior\\DuckBehavior-45998.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 0,
+            "steps": 45998,
             "file_path": "results\\ZombieDuck6\\DuckBehavior.onnx",
-            "reward": null,
-            "creation_time": 1713848491.3423116,
+            "reward": -1.75,
+            "creation_time": 1715015054.0702708,
             "auxillary_file_paths": [
-                "results\\ZombieDuck6\\DuckBehavior\\DuckBehavior-0.pt"
+                "results\\ZombieDuck6\\DuckBehavior\\DuckBehavior-45998.pt"
             ]
         }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.2.2+cpu"
     }
 }

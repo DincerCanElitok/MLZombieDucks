@@ -1,0 +1,65 @@
+{
+    "DuckBehavior": {
+        "checkpoints": [
+            {
+                "steps": 500012,
+                "file_path": "results\\ZombieDuck10\\DuckBehavior\\DuckBehavior-500012.onnx",
+                "reward": null,
+                "creation_time": 1715023536.2503746,
+                "auxillary_file_paths": [
+                    "results\\ZombieDuck10\\DuckBehavior\\DuckBehavior-500012.pt"
+                ]
+            },
+            {
+                "steps": 500012,
+                "file_path": "results\\ZombieDuck10\\DuckBehavior\\DuckBehavior-500012.onnx",
+                "reward": null,
+                "creation_time": 1715023560.6344993,
+                "auxillary_file_paths": [
+                    "results\\ZombieDuck10\\DuckBehavior\\DuckBehavior-500012.pt"
+                ]
+            },
+            {
+                "steps": 502572,
+                "file_path": "results\\ZombieDuck10\\DuckBehavior\\DuckBehavior-502572.onnx",
+                "reward": null,
+                "creation_time": 1715024209.6833513,
+                "auxillary_file_paths": [
+                    "results\\ZombieDuck10\\DuckBehavior\\DuckBehavior-502572.pt"
+                ]
+            },
+            {
+                "steps": 505132,
+                "file_path": "results\\ZombieDuck10\\DuckBehavior\\DuckBehavior-505132.onnx",
+                "reward": null,
+                "creation_time": 1715024286.908779,
+                "auxillary_file_paths": [
+                    "results\\ZombieDuck10\\DuckBehavior\\DuckBehavior-505132.pt"
+                ]
+            },
+            {
+                "steps": 533292,
+                "file_path": "results\\ZombieDuck10\\DuckBehavior\\DuckBehavior-533292.onnx",
+                "reward": null,
+                "creation_time": 1715024563.740096,
+                "auxillary_file_paths": [
+                    "results\\ZombieDuck10\\DuckBehavior\\DuckBehavior-533292.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 533292,
+            "file_path": "results\\ZombieDuck10\\DuckBehavior.onnx",
+            "reward": null,
+            "creation_time": 1715024563.740096,
+            "auxillary_file_paths": [
+                "results\\ZombieDuck10\\DuckBehavior\\DuckBehavior-533292.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.2.2+cpu"
+    }
+}

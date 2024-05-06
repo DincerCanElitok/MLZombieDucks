@@ -1,0 +1,38 @@
+{
+    "DuckBehavior": {
+        "checkpoints": [
+            {
+                "steps": 30372,
+                "file_path": "results\\ZombieDuck11\\DuckBehavior\\DuckBehavior-30372.onnx",
+                "reward": null,
+                "creation_time": 1715025095.799799,
+                "auxillary_file_paths": [
+                    "results\\ZombieDuck11\\DuckBehavior\\DuckBehavior-30372.pt"
+                ]
+            },
+            {
+                "steps": 153933,
+                "file_path": "results\\ZombieDuck11\\DuckBehavior\\DuckBehavior-153933.onnx",
+                "reward": null,
+                "creation_time": 1715025875.0517156,
+                "auxillary_file_paths": [
+                    "results\\ZombieDuck11\\DuckBehavior\\DuckBehavior-153933.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 153933,
+            "file_path": "results\\ZombieDuck11\\DuckBehavior.onnx",
+            "reward": null,
+            "creation_time": 1715025875.0517156,
+            "auxillary_file_paths": [
+                "results\\ZombieDuck11\\DuckBehavior\\DuckBehavior-153933.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.2.2+cpu"
+    }
+}

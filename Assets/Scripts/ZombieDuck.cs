@@ -28,7 +28,7 @@ public class ZombieDuck : Agent
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         HealthUpdate();
-        startPos = transform.position;
+        startPos = transform.localPosition;
     }
     public override void OnEpisodeBegin()
     {
@@ -36,8 +36,8 @@ public class ZombieDuck : Agent
         chooseDiet = false;
         ducks = new List<ZombieDuck>(transform.parent.GetComponent<Habitat>().ducks);
         ducks.Remove(this);
-        vegetables = transform.parent.GetComponent<Habitat>().vegetables;
-        transform.position = startPos;
+        vegetables = new List<Vegetable>(transform.parent.GetComponent<Habitat>().vegetables);
+        transform.localPosition = startPos;
     }
     private void Update()
     {
@@ -79,12 +79,7 @@ public class ZombieDuck : Agent
         
         foreach (ZombieDuck duck in ducks)
         {
-            //if(duck == this)
-            //{
-            //    continue;
-            //}
             float distance = Vector2.Distance(transform.position, duck.transform.position);
-            //Debug.Log(distance);
             countOfDucks++;
             if (distance < closestDuckDistance)
             {
@@ -139,13 +134,13 @@ public class ZombieDuck : Agent
             if (selectedDietAction >= 0.5f)
             {
                 diet = Diet.Carnivore;
-                //spriteRenderer.color = carnivoreColor;
+                spriteRenderer.color = carnivoreColor;
                 chooseDiet = true;
             }
             else
             {
                 diet = Diet.Herbivore;
-                //spriteRenderer.color = herbivoreColor;
+                spriteRenderer.color = herbivoreColor;
                 chooseDiet = true;
             }
         }
@@ -158,25 +153,42 @@ public class ZombieDuck : Agent
         {
             if(diet == Diet.Herbivore)
             {
-                AddReward(5f);
-                vegetables.Remove(collision.gameObject.GetComponent<Vegetable>());
+                AddReward(5f);             
                 collision.gameObject.SetActive(false);
-                if (vegetables == null)
+                if (vegetables.Count == 1)
                 {
                     AddReward(10f);
                     transform.parent.GetComponent<Habitat>().restartHabitat.Invoke();
                 }
+                else
+                {
+                    vegetables.Remove(collision.gameObject.GetComponent<Vegetable>());
                     
+                    foreach (var otherDuck in ducks)
+                    {
+                        otherDuck.vegetables.Remove(collision.gameObject.GetComponent<Vegetable>());
+                    }
+                }
+                    
+
             }
             else if (diet == Diet.Carnivore)
             {
                 AddReward(1f);
-                vegetables.Remove(collision.gameObject.GetComponent<Vegetable>());
                 collision.gameObject.SetActive(false);
-                if (vegetables == null)
+                if (vegetables.Count == 1)
                 {
                     AddReward(5f);
                     transform.parent.GetComponent<Habitat>().restartHabitat.Invoke();
+                }
+                else
+                {
+                    vegetables.Remove(collision.gameObject.GetComponent<Vegetable>());
+
+                    foreach (var otherDuck in ducks)
+                    {
+                        otherDuck.vegetables.Remove(collision.gameObject.GetComponent<Vegetable>());
+                    }
                 }
             }                                   
         }
@@ -186,8 +198,9 @@ public class ZombieDuck : Agent
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
-            AddReward(-5f);
-            transform.position = startPos;
+            AddReward(-2f);
+            transform.localPosition = startPos;
+            //transform.parent.GetComponent<Habitat>().restartHabitat.Invoke();
         }
         else if (collision.gameObject.GetComponent<ZombieDuck>() != null && diet == Diet.Carnivore)
         {
